@@ -1,0 +1,338 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* parte 4 */
+
+#animationText {
+	margin-left: 33%;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 20px rgb(196, 232, 138);
+	animation: textA 3s linear infinite;
+	/* animation: textA 3s steps(20, end) infinite; */
+	overflow: hidden;
+}
+
+@keyframes textA {
+	33% {
+		opacity: 0;
+	}
+
+	60% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.texto-animado {
+	overflow: hidden;
+	animation: typing 3s steps(20, end);
+}
+
+
+#backgroundTable {
+	background: url(./4background.png) no-repeat;
+	background-size: 100%;
+	width: 60%;
+	height: 800px;
+	padding: 10% 5%;
+	margin-left: 15%;
+}
+
+.conteinerDecorado {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: translate(3%);
+	margin-bottom: 25px;
+}
+
+.conteinerDecorado>h4 {
+	font-size: 20px;
+	color: bisque;
+}
+
+.conteinerDecorado>p {
+	font-size: 15px;
+	color: cadetblue;
+}
+
+/* parte 3 */
+
+body {
+	overflow-x: hidden;
+}
+
+label {
+	margin-bottom: 20px;
+	color: rgb(49, 62, 56);
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: none;
+}
+
+input,
+textarea {
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: rgb(49, 62, 56);
+	text-shadow: none;
+}
+
+.bloco {
+	display: block;
+	width: 90vw;
+	align-content: normal;
+	justify-content: normal;
+	text-align: center;
+	color: rgb(49, 62, 56);
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.blocSpecial {
+	display: block;
+	margin: 0 auto 0 auto;
+	margin-bottom: 20px;
+	width: 500px;
+	height: 50px;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Times New Roman', Times, serif;
+	border-radius: 20px;
+	border: none;
+	background: radial-gradient(rgb(177, 255, 208), rgb(198, 255, 142), rgba(255, 255, 255, 0.501));
+	color: rgb(0, 0, 0);
+	transition: 0.3s;
+	text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.blocSpecial:hover {
+	height: 60px;
+	width: 100%;
+	box-shadow: 5px 9px 20px black;
+}
+
+.linha {
+	display: inline;
+	align-content: normal;
+	justify-content: normal;
+	text-align: center;
+	color: rgb(49, 62, 56);
+	margin-bottom: 40px;
+	text-shadow: none;
+}
+
+input:focus {
+	text-decoration: underline;
+	text-decoration-color: rgb(157, 243, 251);
+	text-decoration-style: double;
+}
+
+.corrections {
+	width: 42%;
+}
+
+.corrections2 {
+	transform: translate(45%);
+}
+
+/* parte 2 */
+.baseVIDEOS {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 600px;
+	position: relative;
+	/* top: 0; 
+	left: 35vw; */
+	z-index: 1;
+	box-shadow: inset 0 0 10px #000000;
+	background-color: rgb(255, 255, 255, 0.3);
+	/* testes */
+}
+
+.boxV1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	position: absolute;
+	/* transform: translate(-85%); */
+	/* test */
+	box-shadow: 3px 3px 10px rgba(255, 117, 209, 0.5), -3px -3px 30px rgba(300, 100, 100, 0.5);
+	left: 5%;
+	z-index: 1;
+	transition: 0.3s;
+	opacity: 0.9;
+	filter: brightness(40%);
+}
+
+.boxV2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(255, 0, 208);
+	position: absolute;
+	left: 30%;
+	box-shadow: 3px 3px 10px rgba(79, 117, 255, 0.5), -3px -3px 30px rgba(300, 100, 100, 0.5);
+	z-index: 2;
+	transition: 0.3s;
+}
+
+.boxV3 {
+	background-color: blue;
+	position: absolute;
+	/* transform: translate(0%, 0%); */
+	/* interessante */
+	left: 55%;
+	box-shadow: 3px 3px 10px rgba(167, 255, 66, 0.5), -3px -3px 30px rgba(300, 100, 100, 0.5);
+	z-index: 1;
+	/* z-index tem que ser irmão do elemento para funcionar perfeitamente, mas as vezes funciona do pai para filho, principalmente quando tem position no elemento como fixed*/
+	transition: 0.3s;
+	opacity: 0.9;
+	filter: brightness(40%);
+}
+
+.boxV1:hover {
+	box-shadow: -20px 10px 20px rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	opacity: 1;
+	filter: brightness(100%);
+}
+
+.boxV2:hover {
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
+	z-index: 3;
+}
+
+.boxV3:hover {
+	box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.5);
+	z-index: 3;
+	opacity: 1;
+	filter: brightness(100%);
+}
+
+/* parte 1 */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #444;
+	background: url(StarOcean.gif) no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+}
+
+.center {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+/* add */
+#home {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	color: rgb(233, 253, 218);
+	text-shadow: 6px 6px 20px rgb(135, 167, 248);
+}
+
+/* add */
+#contato {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	color: rgb(218, 244, 253);
+	text-shadow: -6px 6px 20px rgb(248, 242, 135);
+	background-image: linear-gradient(60rad, rgba(130, 255, 130, 0.556), rgba(153, 209, 255, 0.425));
+	box-shadow: inset 0px 5px 20px #000000;
+}
+
+.range {
+	margin-bottom: 7.5px;
+	padding-bottom: 7.5px;
+}
+
+.range2 {
+	margin-top: 7.5px;
+	padding-top: 7.5px;
+}
+
+.range3 {
+	margin-right: 120px;
+}
+
+/* add */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+	height: 15%;
+	z-index: 3;
+	top: 0;
+}
+
+.ilumination {
+	text-shadow: 0 0 3px white;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+section h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+section p {
+	line-height: 1.5;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}

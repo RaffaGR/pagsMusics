@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Melhoria do design -->
+    <link rel="icon" type="image/png" href="../atividadeMusicRafaVF/Videos/indicador-de-dupla-marcacao.png"/>
+    <title>🎯</title>
+    <style>
+        body {
+            background: radial-gradient(rgb(208, 178, 178),rgb(68, 64, 64),rgba(0,0,0));
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        ol { 
+            counter-reset: item;
+            list-style-type: none;
+        }
+        li {
+            font-size: 40vh;
+            /* font-size: 300px; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        li.caminho {
+            font-size: 30vh;
+            /* font-size: 250px; */
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            color: black;
+        }
+
+        #novasMusicas {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        #triste {
+            margin-top: 50px;
+        }
+        #critico {
+            margin-top: 20px;
+        }
+        #finish {
+            margin-top: 500px;
+            margin-bottom: 200px;
+        }
+        body >table > tr > td > a {
+            font-size: 100px;
+        }
+        .iluminacao:hover {
+            text-shadow: 0 0 20px rgb(196, 91, 241);
+            box-shadow: 0 0 50px rgb(82, 131, 157);
+            border-radius: 50%;
+            transition: 1.5s;
+        }
+
+        .mascaraTrue {
+            width: 100%;
+            height: 100%;
+            object-fit: none; /* não funciona no iframe kk */
+        }
+
+        /* Temos que conseguir animar o background da seta */
+/*         #simples {
+            animation: simplesText 5s linear infinite;
+            transition: 1;
+        }
+        @keyframes simplesText {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <!-- Organizamento de caminhos ou links para sites de videos -->
+    <ul>
+        <ol>
+            <li class="caminho" id="conquista">⛈️</li>
+            <li><a alt="Link" href="./momentoConquista.html">(¬‿¬)</a></li>
+            <li class="caminho" id="triste">🌪️</li>
+            <li><a alt="Link" href="./momentoTriste.html">(´⌒`)</a></li>
+            <li class="caminho" id="critico">🌥️</li>
+            <li><a alt="Link" href="./momentoCritico.html">(ㆆ_ㆆ)</a></li>
+            <li class="caminho" id="feliz">💫</li>
+            <li><a alt="Link" href="./momentoFeliz.html">^_^</a></li>
+            <li class="caminho" id="proa">👁</li>
+            <li><a alt="Link" href="./momentoProa.html">♪(◡‿◡)♪</a></li>
+            <li class="caminho" id="universal">♾</li>
+            <li><a alt="Link" href="./momentoUniversal.html">(⌐■_■)</a></li>
+            <li class="caminho" id="novasMusicas">🕳️</li>
+            <li><a alt="Link" href="./MusicasNovas.html">(+_+)</a></li>
+        </ol>
+        <table id="finish" style="width:100%; font-size: 100px; text-align: center;">
+            <tr>
+              <td><a href="#conquista">⛈️</a></td>
+              <td><a href="#triste">🌪️</a></td>
+              <td><a href="#critico">🌥️</a></td>
+            </tr>
+            <tr>
+              <td><iframe alt="incorporação da pag com video" src="../atividadeMusicRafaVF/momentoConquista.html" name="myIFrame" style="border: solid #000000; border-radius: 50px 0px 150px;" scrolling="no"></iframe></td>
+              <td><iframe alt="incorporação da pag com video" src="../atividadeMusicRafaVF/momentoTriste.html" name="myIFrame" scrolling="no" style="border: 1px ridge #000000; border-radius: 0px 0px 150px 150px;"></iframe></td>
+              <td><iframe alt="incorporação da pag com video" src="../atividadeMusicRafaVF/momentoCritico.html" name="myIFrame" style="border: solid #000000; border-radius: 0px 50px 0px 150px;" scrolling="no"></iframe></td>
+            </tr>
+            <tr>
+                <td><a href="#feliz">💫</a></td>
+                <td><a href="#proa">👁</a></td>
+                <td><a href="#universal">♾</a></td>
+            </tr>
+            <tr>
+              <td><iframe alt="incorporação da pag com video" src="../atividadeMusicRafaVF/momentoFeliz.html" name="myIFrame" style="border: 1px ridge #000000; border-radius: 0px 150px 0px 50px;" scrolling="no"></iframe></iframe></td>
+              <td><iframe alt="incorporação da pag com video" src="../atividadeMusicRafaVF/momentoProa.html" name="myIFrame" scrolling="no" style="border: 1px ridge #000000; border-radius: 150px 150px 0px 0px;"></iframe></td>
+              <td><iframe alt="incorporação da pag com video" src="../atividadeMusicRafaVF/momentoUniversal.html" name="myIFrame" style="border: solid #000000; border-radius: 150px 0px 50px;" scrolling="no"></iframe></td>
+            </tr>
+            <tr>
+                <td></td> <!-- espaço -->
+                <td alt="continue" style="transform: rotate(90deg);"><a href="#goReality">➱</a></td>
+            </tr>
+            <tr>
+                <td></td> <!-- espaço -->
+                <td id="goReality"><a href="../atividadeMusicRafaVF/MusicasNovas.html">🕳️</a></td>
+            </tr>
+            <tr>
+                <td></td> <!-- espaço -->
+                <td><iframe alt="incorporação da pag com video" class="mascaraTrue" src="../atividadeMusicRafaVF/MusicasNovas.html" name="myIFrame" style="border: 1px ridge #a19e9e; border-radius: 30%;" scrolling="no"></iframe></iframe></td>
+            </tr>
+            <tr>
+                <td id="simples" style="background-image: linear-gradient(45deg, rgb(141, 243, 167), rgb(175, 214, 247), rgb(246, 81, 255), rgba(96, 0, 185, 0.76)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">↪</td>
+                <td><a class="iluminacao" href="../atividadeMusicRafaVF/musicMemorysPag1.html">💎</a></td>
+                <td id="simples" style="background-image: linear-gradient(45deg, rgb(141, 243, 167), rgb(175, 214, 247), rgb(160, 252, 243), rgba(96, 0, 185, 0.76)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">↩</td>
+            </tr>
+        </table>
+    </ul>
+<!--     AVISO! Todos os materiais desse site inclusive sites do link serve apenas para fim didaticos -->
+</body>
+</html>

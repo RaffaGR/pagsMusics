@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🪐</title>
+        <link rel="icon" type="image/png" href="../atividadeMusicRafaVF/Videos/indicador-de-dupla-marcacao.png" />
+        <style>
+            .base {
+                width: 0px;
+                height: 0px;
+                position: relative;
+                margin: 0 auto;
+                overflow-x: none;
+                overflow-y: none;
+            }
+
+            .sol1 {
+                width: 400px;
+                height: 400px;
+                background-color: red;
+                top: 50%;
+                left: 50%;
+                margin-top: 20vh;
+                margin-left: -25px;
+                animation: rotate 50s linear infinite;
+            }
+
+            .terra1 {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                animation: orbit 50s linear infinite;
+            }
+
+            .lua1 {
+                width: 50px;
+                height: 50px;
+                background-color: blue;
+                animation: orbit2 50s linear infinite;
+            }
+
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes orbit {
+                from {
+                    transform: rotate(0deg) rotate(0deg) translate(500px);
+                }
+
+                to {
+                    transform: rotate(360deg) rotate(-360deg) translate(500px);
+                }
+            }
+
+            @keyframes orbit2 {
+                from {
+                    transform: rotate(0deg) translate(125px) rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(-1turn) translate(125px) rotate(1turn);
+                }
+            }
+
+            body {
+                background: url(outerspace.gif) no-repeat;
+                background-attachment: fixed;
+                background-size: 100%;
+                overflow: scroll;
+            }
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .sol {
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            .terra {
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            .lua {
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            .terra:hover {
+                box-shadow: 0 0 120px #f19a36, 0 0 60px #0071f2, 0 0 10px #4000ff, 0 0 200px #ffffff;
+            }
+
+            .lua:hover {
+                box-shadow: 0 0 120px #f19a36, 0 0 60px #fcfcfc, 0 0 10px #48464f, 0 0 200px #000000;
+            }
+
+            .sol:hover {
+                box-shadow: 0 0 120px #f19a36, 0 0 60px #caf200, 0 0 10px #c99300, 0 0 200px #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main style="display: flex; flex-direction: row; justify-content: flex-start; align-content: center;">
+            <div name="left" style="width: 300px;"> <!-- border-right: 0.1px dashed white; -->
+                <h2 style="margin-top: 60px; margin-bottom: 80px; color: rgb(255, 230, 89);">O Sol representa a musica que ouvimos pensando no amanhacer para quando estamos ansiosos na nossa janta - Pizza</h2>
+                <hr>
+                <h2 style="margin-top: 60px; margin-bottom: 80px; color: rgb(97, 255, 223);">A Terra representa a musica da oportunidade para sermos curiosos - Sopa</h2>
+                <hr>
+                <h2 style="margin-top: 60px; color: rgb(128, 0, 255);">A Lua representa a musica para lembrarmos dos nossos sucessos - Churrasco</h2>
+            </div>
+            <div name="rigth" class="base">
+                <div class="sol1 sol">
+                    <video class="sol" title="Hi Hi" alt="Video de musica para momentos que ficamos pequenos" controls>
+                        <source src="./Videos/1Chill Work Music — Calm Focus Mix (online-video-cutter.com).mp4" type="video/mp4">
+                        <source src="./Videos/1Chill Work Music — Calm Focus Mix (online-video-cutter.com).ogg" type="video/ogg">
+                    </video>
+
+                    <div class="terra1 terra">
+                        <video class="terra" title="Hi Hi" alt="Video de musica para momentos que ficamos pequenos" controls>
+                            <source src="./Videos/2coffe.mp4" type="video/mp4">
+                            <source src="./Videos/2coffe.ogg" type="video/ogg">
+                        </video>
+                        <div class="lua1 lua">
+                            <video class="lua" title="Hi Hi" alt="Video de musica para momentos que ficamos pequenos" controls>
+                                <source src="./Videos/3Studio_Project.mp4" type="video/mp4">
+                                <source src="./Videos/X2Download.app-Chill Work Music — Calm Focus Mix (online-video-cutter.com).ogg" type="video/ogg">
+                            </video>
+                </div></div></div>
+            </div>
+        </main>
+    </body>
+</html>
